@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --force-yes \
 	    flex \
 	    gdisk \
 	    git \
+	    libssl-dev \
 	    libc6:i386 \
 	    libfdt-dev \
 	    libftdi-dev \
