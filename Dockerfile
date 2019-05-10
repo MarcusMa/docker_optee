@@ -16,6 +16,10 @@ RUN apt-get update && apt-get install -y --force-yes \
 	    flex \
 	    gdisk \
 	    git \
+		sudo \
+		wget \ 
+		cpio \
+		rsync \
 	    libssl-dev \
 	    libc6:i386 \
 	    libfdt-dev \
@@ -46,6 +50,8 @@ RUN apt-get update && apt-get install -y --force-yes \
 # Download repo
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /bin/repo
 RUN chmod a+x /bin/repo
+
+RUN echo 'root:root' | chpasswd
 
 RUN useradd --create-home --shell /bin/bash optee
 RUN echo 'optee:optee' | chpasswd
