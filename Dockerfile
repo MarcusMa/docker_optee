@@ -71,4 +71,6 @@ RUN /bin/repo sync -j3
 WORKDIR /home/optee/qemu-optee/build
 RUN make toolchains -j3
 
+RUN make -f qemu.mk all
+
 #RUN make -j4 all run
